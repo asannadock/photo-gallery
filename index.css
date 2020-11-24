@@ -1,28 +1,21 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: #2A1A1F;
-    color: white;
 }
-
-* {
-    font-family: "Lucida Console", Monaco, monospace; 
-}
-
-.my-gallery {
+.gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 }
-
-.my-photos {
+.photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
-
-.my-photo {
-    border: 0.1rem solid white;
-    border-radius: 0.7rem;
-    margin: 0.5rem;
+.photo {
+    border: .1rem solid #fff;
+    border-radius: .7rem;
+    margin: .5rem;
 }
