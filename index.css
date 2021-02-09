@@ -19,3 +19,6 @@ body {
     border-radius: .7rem;
     margin: .5rem;
 }
+.photo:not(#selected-photo):hover {
+    cursor: pointer;
+}
