@@ -19,7 +19,7 @@ async function getPhotos() {
 getPhotos().then(photos => {
     document.body.innerHTML = 
     `<div class="gallery">
-        <img class="photo" id="selected-photo" src="https://picsum.photos/id/${photos[2].id}/400/400" />
+        <img class="photo" id="selected-photo" src="https://picsum.photos/id/${photos[2].id}/400/400" alt='${photos[2].title}' title='${photos[2].title}' />
         ${displayPhotos(photos)}
     </div>`
 
@@ -38,6 +38,8 @@ getPhotos().then(photos => {
             let selectedPhotoSrc = `${eachPhoto.src.substr(0, eachPhoto.src.length - 7)}400/400`
             let selectedPhoto = document.getElementById('selected-photo')
             selectedPhoto.src = selectedPhotoSrc
+            selectedPhoto.alt = `${eachPhoto.alt}`
+            selectedPhoto.title = `${eachPhoto.alt}`
             selectedPhoto.style.display = 'inline'
         })
     })
